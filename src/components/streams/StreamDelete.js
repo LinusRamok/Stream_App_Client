@@ -7,7 +7,10 @@ import { Link } from "react-router-dom";
 
 class StreamDelete extends React.Component {
   componentDidMount() {
+    console.log("k");
+
     this.props.fetchStream(this.props.match.params.id);
+    console.log(this.props.stream);
   }
   renderActions() {
     return (
@@ -32,6 +35,7 @@ class StreamDelete extends React.Component {
     return `Are you sure you want to delete the stream "${this.props.stream.title}"?`;
   }
   render() {
+    console.log("render");
     return (
       <Modal
         title="Delete Stream"
